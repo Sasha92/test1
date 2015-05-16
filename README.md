@@ -1,37 +1,41 @@
-test1
+#test1
 
-About
+##About
 This is test tasks.
 
-1. TransformArray.php:
- Array such view with data:
-$data = array(
-array( 'x' => '1', 'y' => '1', 'z' => '1' ),
-...
-array( 'x' => '99', 'y' => '99', 'z' => '99' )
-);
+###1. TransformArray.php:
+
+Array such view with data:
+
+    $data = array(
+    array( 'x' => '1', 'y' => '1', 'z' => '1' ),
+    ...
+    array( 'x' => '99', 'y' => '99', 'z' => '99' )
+    );
 TransformArray.php allow transform array in such view:
-$data = array(
-  'x' => array('1', ..., '99'),
-  'y' => array('1', ..., '99'),
-  'z' => array('1', ..., '99')
-);
 
-2. FilterArray.php
-Remove duplicates from an array of the form
+    $data = array(
+    'x' => array('1', ..., '99'),
+    'y' => array('1', ..., '99'),
+    'z' => array('1', ..., '99')
+    );
 
-$phone = array(
-  array('number' => '3456', 'type' => 'mobile'), array('number' => '1234', 'type' => 'home'), array('number' => '1234', 'type' => 'work'), array('number' => '1234', 'type' => 'work'),
-);
+###2. FilterArray.php
+Remove duplicates from an array of the form.
 
-3. User
+    $phone = array(
+      array('number' => '3456', 'type' => 'mobile'), array('number' => '1234', 'type' => 'home'), array('number' => '1234', 'type' => 'work'), array('number' => '1234', 'type' => 'work'),
+    );
+
+###3. User
 
 In the database there is a table with the user profile user_profile (id, name, surname, phone_number, birthday). It is necessary to realize the opportunity to view the history of changes in the user profile fields.
-Example:
+_Example:_
 
-$client->getHistory('phone_number');
-result
+    $client->getHistory('phone_number');
 
-array(
-'2012-12-01 10:00:00' => '777-77-77',
-'2012-12-04 11:00:00' => '666-66-66' );
+_Result:_
+
+    array(
+    '2012-12-01 10:00:00' => '777-77-77',
+    '2012-12-04 11:00:00' => '666-66-66' );
